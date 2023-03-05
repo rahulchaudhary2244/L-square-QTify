@@ -3,7 +3,7 @@
     height: 4.625rem;
     width: 100vw;
     display: flex;
-    padding: 0.8125rem 2rem;
+    padding: 0 2rem;
     justify-content: space-between;
     align-items: center;
 }

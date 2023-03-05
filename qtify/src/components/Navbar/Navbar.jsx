@@ -9,7 +9,7 @@ function Navbar() {
         <>
             <div className={styles['navbar']}>
                 <Logo />
-                <SearchBar />
+                <SearchBar placeholder="Search a song of your choice" />
                 <Button btnText="give feedback" />
             </div>
         </>
