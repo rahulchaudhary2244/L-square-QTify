@@ -27,7 +27,7 @@
     outline: none;
 }
 
-input[type='search'].search-input::-webkit-input-placeholder {
+.search-input::placeholder {
     color: var(--color-black);
 }
 
