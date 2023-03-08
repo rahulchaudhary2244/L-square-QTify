@@ -9,4 +9,5 @@
 .hero-image {
     width: 799px;
     height: 212px;
+    object-fit: contain;
 }
