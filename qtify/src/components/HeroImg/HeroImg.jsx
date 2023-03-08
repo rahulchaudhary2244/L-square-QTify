@@ -6,7 +6,7 @@ function HeroImg() {
         <div className={styles['container']}>
             <img
                 src={require('../../assets/heroImg.png')}
-                alt="hero image"
+                alt="hero-pic"
                 className={styles['hero-image']}
             />
         </div>
