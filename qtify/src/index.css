@@ -54,3 +54,7 @@ h6 {
 button {
     cursor: pointer;
 }
+
+.swiper-slide {
+    width: auto !important;
+}

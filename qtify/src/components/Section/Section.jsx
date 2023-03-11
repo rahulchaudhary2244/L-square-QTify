@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Card from '../Card/Card';
+import Carousel from '../Carousel/Carousel';
 import styles from './Section.module.css';
 
 function Section({ title, dataSource }) {
@@ -14,13 +15,14 @@ function Section({ title, dataSource }) {
         <section className={styles['container']}>
             <div className={styles['top-bar']}>
                 <h4>{title}</h4>
-                <h4
-                    style={{ color: 'var(--color-primary)', cursor: 'pointer' }}
+                <button
+                    className={styles['button']}
+                    style={{ color: 'var(--color-primary)' }}
                     onClick={() => setIsShowAll((prev) => !prev)}
                 >
-                    {isShowAll && <span>Show All</span>}
-                    {!isShowAll && <span>Collapse</span>}
-                </h4>
+                    {!isShowAll && <span>Show All</span>}
+                    {isShowAll && <span>Collapse</span>}
+                </button>
             </div>
 
             <div
@@ -36,6 +38,25 @@ function Section({ title, dataSource }) {
                         type="album"
                     />
                 ))}
+            </div>
+
+            <div
+                style={{
+                    marginTop: '18px',
+                    display: `${isShowAll ? 'none' : 'block'}`,
+                }}
+            >
+                <Carousel
+                    data={cards}
+                    renderData={(item) => (
+                        <Card
+                            description={item.description}
+                            follows={item.follows}
+                            image={item.image}
+                            type="album"
+                        />
+                    )}
+                />
             </div>
         </section>
     );
