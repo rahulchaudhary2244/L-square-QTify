@@ -5,7 +5,7 @@ import styles from './Section.module.css';
 
 function Section({ title, dataSource }) {
     const [cards, setCards] = useState([]);
-    const [isShowAll, setIsShowAll] = useState(true);
+    const [isShowAll, setIsShowAll] = useState(false);
 
     useEffect(() => {
         dataSource().then((data) => setCards(data));
