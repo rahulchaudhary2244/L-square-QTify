@@ -2,18 +2,25 @@ import React from 'react';
 import Pill from '../Pill/Pill';
 import styles from './Card.module.css';
 
-function Card({ imageUrl, pillText, subtext }) {
+function Card({ image, follows, description, likes, type }) {
     return (
         <div className={styles['card-container']} style={{ maxWidth: '159px' }}>
             <img
-                src={imageUrl || require('../../assets/cardImage.png')}
+                src={image || require('../../assets/cardImage.png')}
                 alt=""
+                loading="lazy"
                 height={170}
             />
             <div className={styles['pill-container']}>
-                <Pill text={pillText || '100M Follows'} />
+                {type === 'album' ? (
+                    <Pill text={`${follows || '100M'} follows`} />
+                ) : (
+                    <Pill text={`${likes || '100'} Likes`} />
+                )}
             </div>
-            <p>{subtext || 'New Bollywood'}</p>
+            <p className={styles['limit-text']}>
+                {description || 'New Bollywood'}
+            </p>
         </div>
     );
 }

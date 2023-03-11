@@ -7,6 +7,7 @@ function HeroImg() {
             <img
                 src={require('../../assets/heroImg.png')}
                 alt="hero-pic"
+                loading="lazy"
                 className={styles['hero-image']}
             />
         </div>

@@ -21,4 +21,14 @@
 .card-container > img {
     object-fit: cover;
     border-radius: 10px 10px 0 0;
+    width: 100%;
+}
+
+.limit-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
 }

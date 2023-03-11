@@ -1,0 +1,21 @@
+.top-bar {
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+    color: var(--color-white);
+}
+
+.cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 18px;
+}
+
+.container {
+    width: 1384px;
+    margin-left: auto;
+    margin-right: auto;
+}
