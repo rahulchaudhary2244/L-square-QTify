@@ -10,10 +10,6 @@ function Section({ title, dataSource }) {
         dataSource().then((data) => setCards(data));
     });
 
-    const handleToggle = (input) => {
-        setIsShowAll(!input);
-    };
-
     return (
         <section className={styles['container']}>
             <div className={styles['top-bar']}>
