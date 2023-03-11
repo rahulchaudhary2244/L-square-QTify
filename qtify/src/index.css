@@ -58,3 +58,8 @@ button {
 .swiper-slide {
     width: auto !important;
 }
+
+.button-transparent {
+    background: transparent;
+    border: none;
+}

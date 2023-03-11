@@ -16,7 +16,8 @@ function Section({ title, dataSource }) {
             <div className={styles['top-bar']}>
                 <h4>{title}</h4>
                 <button
-                    className={styles['button']}
+                    // className={styles['button-transparent']}
+                    className="button-transparent"
                     style={{ color: 'var(--color-primary)' }}
                     onClick={() => setIsShowAll((prev) => !prev)}
                 >
