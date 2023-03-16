@@ -21,3 +21,23 @@ export const fetchNewSongs = async () => {
         return [];
     }
 };
+
+export const fetchSongs = async () => {
+    try {
+        const response = await axios.get(`${BACKEND_URL}/songs`);
+        return await response.data;
+    } catch (error) {
+        console.log({ error }, 'in fetchSongs()');
+        return [];
+    }
+};
+
+export const fetchGenres = async () => {
+    try {
+        const response = await axios.get(`${BACKEND_URL}/genres`);
+        return await response.data;
+    } catch (error) {
+        console.log({ error }, 'in fetchGenres()');
+        return [];
+    }
+};

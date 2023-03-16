@@ -6,13 +6,11 @@ import styles from './Navbar.module.css';
 
 function Navbar() {
     return (
-        <>
-            <div className={styles['navbar']}>
-                <Logo />
-                <SearchBar placeholder="Search a song of your choice" />
-                <Button btnText="give feedback" />
-            </div>
-        </>
+        <div className={styles['navbar']}>
+            <Logo />
+            <SearchBar placeholder="Search a song of your choice" />
+            <Button btnText="give feedback" />
+        </div>
     );
 }
 

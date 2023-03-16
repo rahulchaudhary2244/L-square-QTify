@@ -55,6 +55,7 @@ function Section({ title, dataSource, style }) {
                             follows={item.follows}
                             image={item.image}
                             type="album"
+                            songsCount={item.songs.length}
                         />
                     )}
                 />
