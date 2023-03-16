@@ -10,8 +10,12 @@ function App() {
             <Navbar />
             <HeroImg />
             <Section title={'top albums'} dataSource={fetchTopSongs} />
+            <Section
+                style={{ marginTop: '32px' }}
+                title={'new albums'}
+                dataSource={fetchNewSongs}
+            />
             <hr />
-            <Section title={'new albums'} dataSource={fetchNewSongs} />
         </>
     );
 }

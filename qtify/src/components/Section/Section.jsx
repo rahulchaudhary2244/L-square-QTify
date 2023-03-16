@@ -3,7 +3,7 @@ import Card from '../Card/Card';
 import Carousel from '../Carousel/Carousel';
 import styles from './Section.module.css';
 
-function Section({ title, dataSource }) {
+function Section({ title, dataSource, style }) {
     const [cards, setCards] = useState([]);
     const [isShowAll, setIsShowAll] = useState(false);
 
@@ -12,7 +12,7 @@ function Section({ title, dataSource }) {
     });
 
     return (
-        <section className={styles['container']}>
+        <section className={styles['container']} style={style || {}}>
             <div className={styles['top-bar']}>
                 <h4>{title}</h4>
                 <button

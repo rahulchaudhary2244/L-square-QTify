@@ -10,8 +10,9 @@ function CarouselPreviousButton() {
             style={{
                 position: 'absolute',
                 top: '30%',
-                left: '-1%',
-                zIndex: '3',
+                left: '0',
+                zIndex: '10',
+                transform: 'translateY(50%)',
             }}
             onClick={() => swiper.slidePrev()}
         >

@@ -10,8 +10,9 @@ function CarouselNextButton() {
             style={{
                 position: 'absolute',
                 top: '30%',
-                right: '-1%',
-                zIndex: '3',
+                right: '0',
+                zIndex: '10',
+                transform: 'translateY(50%)',
             }}
             onClick={() => swiper.slideNext()}
         >

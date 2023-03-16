@@ -65,8 +65,8 @@ button {
 }
 
 hr {
-    margin-top: 20px;
-    margin-bottom: 12px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     border: none;
     height: 1px;
     background: var(--color-primary);
