@@ -3,6 +3,7 @@ import HeroImg from './components/HeroImg/HeroImg';
 import HomePageSection from './components/HomePageSection/HomePageSection';
 import Navbar from './components/Navbar/Navbar';
 import { StyledEngineProvider } from '@mui/material/styles';
+import Faqs from './components/Faqs/Faqs';
 
 function App() {
     return (
@@ -10,6 +11,7 @@ function App() {
             <Navbar />
             <HeroImg />
             <HomePageSection />
+            <Faqs />
         </StyledEngineProvider>
     );
 }
