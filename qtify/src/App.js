@@ -1,22 +1,16 @@
 import React from 'react';
-import { fetchTopSongs, fetchNewSongs } from './api/api';
 import HeroImg from './components/HeroImg/HeroImg';
+import HomePageSection from './components/HomePageSection/HomePageSection';
 import Navbar from './components/Navbar/Navbar';
-import Section from './components/Section/Section';
+import { StyledEngineProvider } from '@mui/material/styles';
 
 function App() {
     return (
-        <>
+        <StyledEngineProvider injectFirst>
             <Navbar />
             <HeroImg />
-            <Section title={'top albums'} dataSource={fetchTopSongs} />
-            <Section
-                style={{ marginTop: '32px' }}
-                title={'new albums'}
-                dataSource={fetchNewSongs}
-            />
-            <hr />
-        </>
+            <HomePageSection />
+        </StyledEngineProvider>
     );
 }
 

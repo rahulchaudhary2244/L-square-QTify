@@ -1,11 +1,13 @@
 import React from 'react';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import 'swiper/css';
 import CarouselNextButton from './CarouselNextButton';
 import CarouselPreviousButton from './CarouselPreviousButton';
 
 function Carousel({ data, renderData }) {
+    const swiper = useSwiper();
+
     return (
         <Swiper
             grabCursor
@@ -13,7 +15,7 @@ function Carousel({ data, renderData }) {
             slidesPerView={'auto'}
             scrollbar={{ draggable: true }}
         >
-            <CarouselPreviousButton />
+            {<CarouselPreviousButton />}
             <CarouselNextButton />
             {data.map((item, index) => (
                 <SwiperSlide key={item.id || index}>
