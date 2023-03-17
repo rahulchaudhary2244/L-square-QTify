@@ -7,6 +7,8 @@ function Filters({ filters, handleChange, activeFilter }) {
     return (
         <div className={styles['filter-container']}>
             <Tabs
+                variant="scrollable"
+                scrollButtons="auto"
                 value={activeFilter}
                 onChange={handleChange}
                 aria-label="music filter selection"
