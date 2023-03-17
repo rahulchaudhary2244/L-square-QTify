@@ -26,6 +26,7 @@ function Section({ title, dataSource, style, filterSource, type }) {
                     ...data.data,
                 ])
             );
+        // eslint-disable-next-line
     }, []);
 
     return (
