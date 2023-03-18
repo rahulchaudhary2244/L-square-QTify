@@ -18,7 +18,7 @@ function dataSource() {
         {
             id: '1',
             title: 'Is QTify free to use?',
-            description: 'Yes, Of course',
+            description: 'Yes! It is 100% free, and has 0% ads!',
         },
         {
             id: '2',

@@ -6,6 +6,8 @@ import {
     fetchTopSongs,
 } from '../../api/api';
 import Section from '../Section/Section';
+import Faqs from '../Faqs/Faqs';
+import styles from './HomePageSection.module.css';
 
 function HomePageSection() {
     return (
@@ -29,6 +31,8 @@ function HomePageSection() {
                 filterSource={fetchGenres}
             />
             <hr />
+            <Faqs />
+            <hr className={styles['custom-hr']} />
         </div>
     );
 }

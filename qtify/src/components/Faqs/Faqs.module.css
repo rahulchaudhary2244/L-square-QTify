@@ -11,4 +11,39 @@
     line-height: 75px;
     letter-spacing: 0px;
     text-align: center;
+    margin-bottom: 20px;
+}
+
+.accordian-font-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.accordian-font-description {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.accordian-root {
+    background: var(--color-white);
+    color: var(--color-black);
+    border: 1px solid var(--color-white);
+    border-radius: 10px !important;
+    margin-top: 1.5rem;
+}
+
+.accordian-summary {
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+    border-radius: 10px !important;
+    background: var(--color-black);
+    padding: 1.5rem 2rem;
+}
+
+.accordian-details {
+    padding: 20px 32px 23px 32px;
 }

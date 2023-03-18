@@ -3,22 +3,43 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandMoreRoundedIcon from '@mui/icons-material/ExpandMoreRounded';
+
+import style from './Faqs.module.css';
 
 export default function SimpleAccordion({ dataSource }) {
     return (
-        <div style={{ marginTop: '20px' }}>
+        <div>
             {dataSource().map((item) => (
-                <Accordion>
+                <Accordion
+                    key={item.id}
+                    disableGutters
+                    elevation={0}
+                    className={style['accordian-root']}
+                >
                     <AccordionSummary
-                        expandIcon={<ExpandMoreIcon />}
+                        className={style['accordian-summary']}
+                        expandIcon={
+                            <ExpandMoreRoundedIcon
+                                style={{
+                                    fontSize: 40,
+                                    color: 'var(--color-primary)',
+                                }}
+                            />
+                        }
                         aria-controls={item.id}
                         id={item.id}
                     >
-                        <Typography>{item.title}</Typography>
+                        <Typography className={style['accordian-font-title']}>
+                            {item.title}
+                        </Typography>
                     </AccordionSummary>
-                    <AccordionDetails>
-                        <Typography>{item.description}</Typography>
+                    <AccordionDetails className={style['accordian-details']}>
+                        <Typography
+                            className={style['accordian-font-description']}
+                        >
+                            {item.description}
+                        </Typography>
                     </AccordionDetails>
                 </Accordion>
             ))}
