@@ -21,12 +21,12 @@ const Listbox = styled('ul')(({ theme }) => ({
     borderTop: 0,
     borderRadius: '0px 0px 10px 10px',
     '& li.Mui-focused': {
-        backgroundColor: 'var(--color-primary)',
+        backgroundColor: 'var(--color-hover)',
         color: 'var(--color-white)',
         cursor: 'pointer',
     },
     '& li:active': {
-        backgroundColor: 'var(--color-primary)',
+        backgroundColor: 'var(--color-hover)',
         color: 'var(--color-white)',
     },
 }));
