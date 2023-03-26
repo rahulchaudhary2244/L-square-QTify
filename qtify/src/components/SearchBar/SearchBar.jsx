@@ -89,7 +89,7 @@ function SearchBar({ placeholder = '', data = [] }) {
                                 <img
                                     src={option.image}
                                     alt="card pic"
-                                    loading="eager"
+                                    loading="lazy"
                                     height={71}
                                     width={71}
                                 />

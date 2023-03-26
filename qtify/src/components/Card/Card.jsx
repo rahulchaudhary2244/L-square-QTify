@@ -22,7 +22,7 @@ function Card({ image, tooltip, description, reviews, type }) {
                 <img
                     src={image || require('../../assets/cardImage.png')}
                     alt=""
-                    loading="eager"
+                    loading="lazy"
                     height={170}
                 />
                 <div className={styles['pill-container']}>
