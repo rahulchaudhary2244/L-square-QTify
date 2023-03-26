@@ -4,8 +4,7 @@ import Carousel from '../Carousel/Carousel';
 import Filters from '../Filters/Filters';
 import styles from './Section.module.css';
 
-function Section({ title, dataSource, style, filterSource, type }) {
-    const [cards, setCards] = useState([]);
+function Section({ title, data: cards, style, filterSource, type }) {
     const [isShowAll, setIsShowAll] = useState(false);
     const [filters, setFilters] = useState([]);
     const [activeFilter, setActiveFilter] = useState('all');
@@ -15,7 +14,6 @@ function Section({ title, dataSource, style, filterSource, type }) {
     };
 
     useEffect(() => {
-        dataSource().then((data) => setCards(data));
         if (!!filterSource)
             filterSource().then((data) =>
                 setFilters([
@@ -84,6 +82,7 @@ function Section({ title, dataSource, style, filterSource, type }) {
     function cardElement(item) {
         return (
             <Card
+                key={item.id || new Date().get}
                 description={item.description}
                 reviews={
                     type === 'album'

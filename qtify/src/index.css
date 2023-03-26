@@ -3,6 +3,7 @@
     --color-primary: #34c94b;
     --color-black: #121212;
     --color-white: #ffffff;
+    --color-gray: #1d1d1d;
 }
 
 *,
@@ -70,4 +71,14 @@ hr {
     border: none;
     height: 1px;
     background: var(--color-primary);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }

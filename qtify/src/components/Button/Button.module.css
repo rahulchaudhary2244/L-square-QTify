@@ -8,4 +8,5 @@
     background: var(--color-black);
     text-transform: capitalize;
     border-radius: 0.75rem;
+    border: 0px;
 }
